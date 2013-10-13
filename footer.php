@@ -11,8 +11,6 @@
 </footer>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.10.2.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/highslide/highslide.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/highslide/highslide.config.js" charset="utf-8"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

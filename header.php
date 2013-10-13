@@ -11,7 +11,6 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' -'; } ?> <?php bloginfo('name'); ?></title>
 
 <!--  <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">-->
-  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>">
@@ -19,7 +18,6 @@
 
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap-theme.min.css" />
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/highslide/highslide.css" />
   <!--[if lt IE 7]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/highslide/highslide-ie6.css" />
   <![endif]-->
@@ -38,17 +36,22 @@
 
   <?php wp_head(); ?>
 </head>
-<body>
-<div id="for_classic_ie"><strong style="color:red">お使いのバージョンのIEでは、サイトが上手く表示されないことが判明しています。最新バージョンのIE(version 9以降)か、他のブラウザ(Firefox, Chromeなど)をご利用ください。ご迷惑をおかけして申し訳ありません。</strong></div>
-<header<?php if($_SERVER['REQUEST_URI'] == '/') echo ' id="header_home"'; ?>>
-  <hgroup>
-    <h1><a href="<?php bloginfo('url'); ?>/" title="ホームへ"><img src="<?php echo bloginfo('template_directory').'/images/logo.png'?>" alt="<?php bloginfo('name'); ?>"></a></h1>
-      <h2><?php bloginfo('description') ?></h2>
-  </hgroup>
-  <nav>
-    <ul>
-      <li><a href="<?php echo get_settings('home'); ?>/">Home</a></li>
+<body style="position:relative;top:50px;">
+<header class="navbar navbar-default navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?php bloginfo('url'); ?>/"><span class="glyphicon glyphicon-star-empty"></span> Atelier NODOKA</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
         <?php wp_list_pages('title_li=&deqpth=1&exclude=487,2281'); ?>
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+  </div>
 </header>
