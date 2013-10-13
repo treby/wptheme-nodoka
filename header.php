@@ -6,6 +6,7 @@
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="follow, all">
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' -'; } ?> <?php bloginfo('name'); ?></title>
 
@@ -16,8 +17,8 @@
   <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>">
   <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>">
 
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/highslide/highslide.js"></script>
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/highslide/highslide.config.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/bootstrap-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/highslide/highslide.css" />
   <!--[if lt IE 7]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/highslide/highslide-ie6.css" />
