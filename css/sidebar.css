@@ -4,108 +4,106 @@
 /*********************************************/
 
 #sidebar {
-	/* フォントの指定 */
-	font: 13px sans-serif;
-	color: #B68279;
+    /* フォントの指定 */
+    font: 13px sans-serif;
+    color: #B68279;
 
+    float: left;                /* 左にfloat */
+    width: 190px;               /* サイズ指定 */
 
+    padding-left: 10px;         /* 実幅：width + padding-right */
 
-	float: left;		/* 左にfloat */
-	width: 190px;		/* サイズ指定 */
-
-	padding-left: 10px;	/* 実幅：width + padding-right */
-
-	color: #554F4B;
-/*	background: #cccccc;	/* 表示確認用 */
+    color: #554F4B;
+/*    background: #cccccc;    /* 表示確認用 */
 }
 
-#sidebar a {			/* サイドバーリンク基本 */
-	color: #AA9E96;
+#sidebar a {                /* サイドバーリンク基本 */
+    color: #AA9E96;
 }
 
 
 /*   1スペース  */
-#sidebar > aside {		/* 基本指定 */
-	margin-bottom: 30px;	/* スペースの間隔 */
+#sidebar > aside {          /* 基本指定 */
+    margin-bottom: 30px;        /* スペースの間隔 */
 
-/*	background: #FFF6E6;	/* 表示確認用 */
+/*    background: #FFF6E6;    /* 表示確認用 */
 }
 
 /* 見出し */
 #sidebar > aside > h2 {
-	font-size: 1.5em;	/* フォントの指定 */
+    font-size: 1.5em;           /* フォントの指定 */
 
-	margin-bottom: 10px;	/* 下の余白指定 */
-	padding:3px 0px 5px 3px;/* 下線とのスペース */
+    margin-bottom: 10px;        /* 下の余白指定 */
+    padding:3px 0px 5px 3px;    /* 下線とのスペース */
 
-	border-bottom:1px solid #AA9E96;
-	border-left:5px solid #AA9E96;
+    border-bottom:1px solid #AA9E96;
+    border-left:5px solid #AA9E96;
 }
 
 /* 段落 */
 #sidebar > aside p {
-	font-size: .9em;	/* フォントサイズ指定 */
-	text-indent: 1em;	/* インデント指定 */
-	line-height: 167%;	/* 行間の指定 */
+    font-size: .9em;            /* フォントサイズ指定 */
+    text-indent: 1em;           /* インデント指定 */
+    line-height: 167%;          /* 行間の指定 */
 
-	margin-left: 5px;	/* 左のマージン */
+    margin-left: 5px;           /* 左のマージン */
 }
 
 /* リスト */
 #sidebar > aside ul {
-	/* padding, marginをリセット */
-	padding: 0px 0px 0px 10px;
-	margin: 0px;
+    /* padding, marginをリセット */
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
 
-/*	background: pink;
-	border:1px solid red;	/* 表示確認用 */
+/*    background: pink;
+    border:1px solid red;    /* 表示確認用 */
 }
 
 /* リスト要素 */
 #sidebar > aside li {
-	margin-top: 10px;	/* 上と少し離す */
-	list-style-type: none;	/* 黒丸を非表示 */
+    margin-top: 10px;        /* 上と少し離す */
+    list-style-type: none;      /* 黒丸を非表示 */
 }
 
 /* リストリンク */
 #sidebar > aside li a {
-	font-size: 1.1em;
+    font-size: 1.1em;
 }
 #sidebar > aside li a:hover {
-	font-weight: bold;	/* リンク選択時太文字に */
-	text-decoration: none;	/* 下線表示なし */
+    font-weight: bold;      /* リンク選択時太文字に */
+    text-decoration: none;      /* 下線表示なし */
 }
-#sidebar > aside li p {	/* リスト説明文 */
-	font-size: .9em;	/* フォントサイズ指定 */
-	margin: 0px 5px 5px 0px;/* リスト説明マージン指定 */
-	padding-top: 3px;	/* パディング指定 */
-	text-align: right;	/* 右揃え */
-	border-top: 1px dashed black;
+#sidebar > aside li p {     /* リスト説明文 */
+    font-size: .9em;            /* フォントサイズ指定 */
+    margin: 0px 5px 5px 0px;    /* リスト説明マージン指定 */
+    padding-top: 3px;           /* パディング指定 */
+    text-align: right;          /* 右揃え */
+    border-top: 1px dashed black;
 }
 
  /*---------------------------------*/
  /*           カレンダー用          */
  /*---------------------------------*/
 #sidebar > aside .calendar {
-	border-collapse: collapse;
-	font-family: sans-serif;
-	margin:5px auto;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin:5px auto;
 }
 #sidebar > aside .calendar > caption {
-	letter-spacing: 2px;
-	padding: 4px;
+    letter-spacing: 2px;
+    padding: 4px;
 }
 #sidebar > aside .calendar th,
 #sidebar > aside .calendar td {
-	padding: 3px;
-	width: 20px;
-	height: 20px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
 }
 #sidebar > aside .calendar td {
-	text-align: right;
-	color: #483E94;
-	letter-spacing: 1px;
+    text-align: right;
+    color: #483E94;
+    letter-spacing: 1px;
 }
 #sidebar > aside .calendar .calendardateheaders {
-	text-align:center;
+    text-align:center;
 }

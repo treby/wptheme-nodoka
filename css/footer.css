@@ -3,16 +3,16 @@
 /*                     by treby  ver20111019 */
 /*********************************************/
 body > footer {
-	clear: both;
-	padding:10px 5px 5px 0;
-	color: #B68279;
-	font-size: 12px;
-	line-height: 110%;
-	text-align: right;
+    clear: both;
+    padding:10px 5px 5px 0;
+    color: #B68279;
+    font-size: 12px;
+    line-height: 110%;
+    text-align: right;
 
-	background-color: #ecd3bf;
-	opacity: 0.8;
+    background-color: #ecd3bf;
+    opacity: 0.8;
 }
 body > footer address {
-	font-style: normal;
+    font-style: normal;
 }
