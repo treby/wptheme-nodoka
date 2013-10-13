@@ -1,0 +1,344 @@
+/*********************************************/
+/* content用CSS                              */
+/*                     by treby  ver20120612 */
+/*********************************************/
+#content {
+	/* フォントの指定 */
+	font: 13px/167% sans-serif;
+	color: #B68279;
+
+	float: left;
+
+	width: 580px;		/* 実幅=width + padding-right + padding-left */
+
+	overflow: visible;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	
+/*	background:brown;	/* 表示確認用 */
+
+}
+#content > .top-more {			/* さらに前の投稿 */
+	text-align: right;
+	margin-right: 1em;
+	margin-bottom: 10px;
+}
+/* 1つの記事 */
+article.post {
+	background: rgba(255,255,255,0.7);
+	border: 1px solid #B68279;
+
+	/* 要素内absolute配置用relative */
+	position: relative;
+
+	padding: 20px 0px 10px 0px;
+	margin: 0 auto 15px;
+}
+/* 記事のタイトル */
+article.post > header h1 {
+	color: #CC6633;
+	background-color: #FFFAFA;
+
+	font: bold 20px/1.5 sans-serif;
+	padding:2px 0px 2px .5em;
+
+	position: relative;
+	text-align: left;
+}
+
+article.post > section > h2 {
+	font-size: 16px;
+	border-left:10px double #9C6359;
+	border-bottom: 1px solid #9C6359;
+	
+	margin: 1.5em 10px 5px;
+	padding: 3px 7px 2px;
+}
+
+article.post > section > h3 {
+	font-size: 16px;
+	
+	margin: 1em 15px 5px;
+	padding: 
+}
+
+article.post > section > h4 {
+	font-size: 14px;
+	
+	margin: 1em 20px 5px;
+}
+
+article.post > section > h5 {
+	font-size: 14px;
+	
+	margin: 1em 20px 5px;
+}
+
+article.post > section > h6 {
+	font-size: 14px;
+	
+	margin: 1em 20px 5px;
+}
+
+article.post > section ul,
+article.post > section ol {
+	padding-left: 50px;
+	margin: 1em 0;
+}
+
+article.post > section li {
+	margin-top: 5px;
+	line-height: 147%;
+}
+
+article.post > section li > ul,
+article.post > section li > ol {
+	padding-left: 20px;
+}
+
+article.post > section table{
+	width: 540px;
+	margin: 2em 20px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+article.post > section table caption{
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+article.post > section table th{
+	padding: 5px;
+	border: 1px solid #9C6359;
+	background: #FFEEE1;
+	color: #554F4B;
+}
+
+article.post > section table td{
+	padding: 5px;
+	border: 1px solid #9C6359;
+}
+
+article.post p {
+	margin: 5px 20px 1em;
+}
+article.post blockquote {
+	margin: 5px 20px 1em 30px;
+}
+
+article.post .more-link {
+	display: block;
+	width: 5em;
+	text-align: center;
+	
+	position: relative;
+	left: 36.5em;
+	margin-bottom: 1em;
+}
+article.post > footer {		
+	font-family: Verdana, Arial, sans-serif;
+	font-size: small;
+	border-top: 1px solid #E44F32;
+	text-align: right;
+	padding-right: 20px;
+	margin: 0px 10px;
+	line-height: normal;
+	padding: 3px;
+}
+article.post > footer > .date {
+	display: block;
+	width: 130px;
+	text-align: left;
+
+	border-bottom: 1px dotted #E44F32;
+	border-left: 11px solid #E44F32;
+
+	padding: 2px 0.5em;
+
+	position: absolute;
+	top: -1px;
+	left: -11px;
+}
+
+/* wp-pagenavi プラグイン用 */
+.wp-pagenavi {
+	width: 110px;
+	margin: 10px auto 30px;
+	position: relative;
+}
+.wp-pagenavi > * {
+	display: block;
+	float: left;
+
+	width: 18px;
+	height: 18px;
+	margin: 1px;
+
+	border: 1px solid #B68279;
+	text-align: center;
+}
+.wp-pagenavi > .previouspostslink,	/* 絶対位置指定要素 */
+.wp-pagenavi > .nextpostslink,
+.wp-pagenavi > .first, .wp-pagenavi > .last ,
+.wp-pagenavi > .pages{ border: none; position: absolute; }
+
+.wp-pagenavi > .previouspostslink { width: auto; left: -45px; }
+.wp-pagenavi > .nextpostslink { width: auto; right: -45px; }
+.wp-pagenavi > .first { left: -63px; }
+.wp-pagenavi > .last { right: -63px; }
+.wp-pagenavi > .pages { width: 108px; bottom: -20px; text-align: center; font-size:0.9em; }
+
+.wp-pagenavi:after {
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0px;
+	content: ".";
+}
+
+ .back_to_top {		/* 個別ページ、固定ページ用 */
+	line-height: 100%;
+	text-align: center;
+	
+	margin-top: 15px;
+}
+
+/**
+ * 単一カラムコンテンツ
+ */
+#content_only { padding-bottom: 20px;  }
+
+#the_content {
+	position: relative;
+
+	background: rgba(255,255,255,0.7);
+	border: 1px solid #B68279;
+
+	margin: 52px 10px 10px 10px;
+	padding: 20px 20px 40px 25px;	
+}
+#the_content > header h1 {
+	position: absolute;
+	right: -1px;
+	top: -40px;
+	width: 750px;
+	border-radius: 30px 0 0 0;
+
+	background: rgba(250,227,197,0.6);
+	font-size: 32px;
+	color: #B68279;
+	text-shadow: 3px 3px 3px #F2BF9B;
+
+	margin-bottom: 15px;
+	padding: 5px 15px 3px;
+	
+	text-align: right;
+}
+#the_content > footer {
+	position: absolute;
+	font-style: italic;
+	
+	bottom: 5px;
+	right: 10px;
+}
+
+/* 見出し、段落 */
+#the_content > section > h1 {
+	font-size: 18px;
+	color:#965145;
+	margin-bottom: 5px;
+	padding: 0 3px 3px;
+	
+	border-bottom: 1px dashed #965145;
+}
+#the_content > section > p + h1 { margin-top: 50px; }
+#the_content > section > h2 {
+	font-size: 14px;
+	border-left:10px double #9C6359;
+	border-bottom: 1px solid #9C6359;
+	
+	margin: 0 5px;
+	padding: 3px 7px 2px;
+}
+#the_content > section > p + h2 { margin-top: 30px; }
+#the_content > section p {
+	text-indent: 1em;
+	margin: 1em 8px 8px 8px;
+}
+#the_content > section h1 + p,
+#the_content > section h2 + p{ margin-top: 10px; }
+
+/* リスト用 */
+#the_content > section ul,
+#the_content > section ol {
+	background: #FFF3EB;
+	line-height: 133%;
+	border-radius: 15px;
+	
+	margin: 18px 18px 18px 30px;
+	padding: 20px 20px 18px 45px;
+}
+#the_content > section li { margin-top: 10px; }
+#the_content > section li:first-child { margin-top: 0; }
+#the_content > section li:last-child { margin-bottom: 0; }
+
+/* 作品紹介用 */
+#the_content > section .work {
+	position: relative;
+
+	border: 1px solid #B68279;
+	background: #FFF3EB;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px #DBC7C3;
+	
+	margin: 25px;
+	padding: 60px 30px 30px;
+}
+.work > h2 {
+	color: #B68279;
+	font-size: 16px;
+	position: absolute;
+	top: 30px;
+	text-shadow: 0px 2px 3px #FFF3EB;
+}
+
+.work > table {
+	position: relative;
+	left: 10px;
+
+	width: 400px;
+	font-size: 12px;
+	margin-top: 10px;
+	border-spacing: 0 7px;
+}
+.work > table > thead,
+.work > table > tbody > tr:first-child { display: none; } 
+
+.work > table > tbody > tr > td {
+	border-bottom: 1px dashed #DE452A;
+	padding: 2px 0;
+}
+.work > table > tbody > tr > td:first-child {
+	width: 75px;
+	text-align: right;
+	padding-right: 5px;
+	border-right: 2px solid #DE452A;
+}
+.work > table > tbody > tr > td:last-child { padding-left: 10px; }
+
+
+
+.work:nth-child(odd) > h2 { right: 30px; text-align:right; }
+.work:nth-child(even) > h2 { left: 30px; text-align: left; }
+.work:nth-child(odd) > .visual {	 float: left; margin-right: 20px; }
+.work:nth-child(even) > .visual { float: right; margin-left: 20px; }
+
+.work:after {
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0px;
+	content: ".";
+}

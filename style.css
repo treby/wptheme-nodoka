@@ -1,0 +1,64 @@
+/* 
+	Theme Name: Nodoka
+	Description: Atelier NODOKA main theme, needs wp_pagenavi.
+	Author: treby
+	Author URI: http://www.atelier-nodoka.net/
+	Version: 0.9
+	
+	Changelog:
+		v0.9 - 10.19.11
+			Nightlife をアトリエのどか用にカスタマイズ
+*/
+
+@import url('css/header.css');
+@import url('css/content.css');
+@import url('css/sidebar.css');
+@import url('css/footer.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+}
+
+html {
+	background: #FFF6E6 url(images/back.png) repeat;
+
+	font: 13px sans-serif;
+	line-height: 167%;
+	color: #B68279;
+}
+
+body {
+	width: 800px;
+	margin: 80px auto 20px;
+	background-color: #FFEEE1;
+	border: 1px solid #B68279;
+	
+	z-index: -10;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol , table{
+	line-height: 100%;
+}
+
+/************************************************
+*	Hyperlinks									*
+************************************************/
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #F38E7B;
+}
+a:visited {
+	color: #F38E7B;
+}
+a:active {
+	color: #B68279;
+}
+a:hover {
+	color: #E9583C;
+	text-decoration: underline;
+}

@@ -1,0 +1,103 @@
+/*********************************************/
+/* header用CSS                               */
+/*                     by treby  ver20111019 */
+/*********************************************/
+body > header {						/* ヘッダ指定 */
+	width: 800px;
+	height: 200px;
+
+	margin-bottom: 15px;
+
+	position: relative;
+	background: #bcebff url('../images/top2.jpg');
+}
+body > header#header_home {			/* トップページ用 */
+	height: 400px;
+	background: #bcebff url('../images/top.jpg');
+}
+body > header h1 {						/* サークルロゴ */
+	font-size: 20px;
+	color: #FFFFFF;
+
+	position: absolute;
+	top:-63px;
+	left:-10px;
+}
+/* 古いIE 警告非表示 */
+/* 2011.12.29 追加ここから */
+:root *> #for_classic_ie {
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+
+#for_classic_ie {
+	z-index: 100;
+	
+	position: absolute;
+/*	top: 30px;
+	left: 80px;*/
+	
+	font-size: 16px;
+	padding: 5px;
+	border: 3px solid red;
+	
+	width: 800px;
+	background: white;
+}
+/* 2011.12.29 追加ここまで */
+
+body > header h2 {						/* サイトの説明(非表示) */
+	display: none;
+	font-size: 15px;
+	font-weight: normal;
+	color: #000000;
+	text-shadow: 0 0 1px #FFFFFF;
+	
+	overflow: hidden;
+	width: 230px;
+	padding: 2px 0 3px 18px;
+
+	background: rgba(255,255,255,0.8);
+	border-radius: 0 0 0 15px;
+	box-shadow: 0 0 5px rgba(255,255,255,0.8);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* コンテンツメニュー */
+body > header > nav {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 798px;
+
+	background: rgba(252,176,88,0.6);
+	padding: 9px 1px;
+
+	font-size: 1.1em;
+	z-index: 2;
+	text-align: right;
+}
+body > header > nav li {
+	display: inline;
+	list-style-type: none;
+}
+body > header > nav li a{
+	color: #ffffff;
+	background: rgba(252,108,88,0.7);
+
+	padding: 8px 20px 9px;
+	margin-left: -3px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+body > header > nav li a:link,
+body > header > nav li a:visited,
+body > header > nav li a:active { color: #ffffff; }
+body > header > nav li a:hover {
+	text-decoration: none;
+	background: rgba(255,255,255,0.3);
+	color: #ff0000;
+}
