@@ -11,9 +11,11 @@ get_header(); ?>
     <p>天使のミクさんマジ天使。</p>
   </div>
 </div>
-<div class="container" id="content">
-  <div class="row">
-    <?php get_sidebar(); ?>
+<div class="content">
+  <div class="container" id="content">
+    <div class="row">
+      <?php get_sidebar(); ?>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
