@@ -19,7 +19,7 @@
  *              (single-post.php)   : blog post
  *          page.php    : static page
  *          home.php    : site front / blog posts index page
- *              (front-page.php)    : site front page
+ *              front-page.php      : site front page
  *
  *  -include pages-
  *      header.php  : get_header($name)

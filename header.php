@@ -20,8 +20,24 @@
   <?php //wp_get_archives('type=monthly&format=link'); ?>
   <?php wp_head(); ?>
 </head>
-<body style="position:relative;top:50px;">
-<header class="navbar navbar-default navbar-fixed-top" role="banner">
+<body>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="logo col-sm-4 col-md-4">
+        <h1>
+          <a href="<?php bloginfo('url') ?>">Atelier <span class="color">NODOKA</span></a>
+        </h1>
+        <div class="hmeta">Your future hasn't been written yet.</div>
+      </div>
+
+      <div class="col-sm-offset-2 col-sm-6 col-md-offset-3 col-md-5">
+        <?php get_search_form(); ?>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="navbar" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -30,7 +46,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?> <span class="glyphicon glyphicon-star-empty"></span></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -38,4 +53,4 @@
       </ul>
     </nav>
   </div>
-</header>
+</div>

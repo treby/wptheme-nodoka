@@ -1,22 +1,24 @@
 <?php
 /**
- * footer.php / get_footer() : フッターモジュール
- *                                    2011.10.20 treby
+ * footer.php : footer module
+ *                            2011.10.20 treby
  */
 
 // Timezone setting
 date_default_timezone_set('Asia/Tokyo');
 ?>
-
-<hr>
-<footer class="container">
-  <div class="copy">
-    <h6><?php bloginfo('name'); ?></h6>
-    <address>Copyright &copy; 2005-2013 Atelier NODOKA, All rights reserved. This site is powered by <a href="http://ja.wordpress.org/">WordPress</a> / Twitter Bootstrap v3.0</address>
+<footer>
+  <div class="container">
+    <div class="copy">
+      <h6><?php bloginfo('name'); ?></h6>
+      <address>Copyright &copy; 2005-2013 Atelier NODOKA, All rights reserved. This site is powered by <a href="http://ja.wordpress.org/">WordPress</a> / Twitter Bootstrap v3.0</address>
+      <hr>
+      <p class="text-right">Access: <?php echo counterize_getuniqueamount(); ?> (T: <?php echo counterize_getuniquehitstoday(); ?>, Y: <?php echo counterize_getuniquehitstheday(1) ?>, 7days: <?php echo counterize_getuniquelatest7days(); ?>)</p>
+    </div>
   </div>
 </footer>
 
-<?php // analytics code ?>
+<!-- Scripts  -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-23931320-1']);

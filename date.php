@@ -4,40 +4,47 @@
  *                     2013.10.14 treby
  */
 
-get_header(); ?>
+$archive_title = 'Archives';
+$archive_detail = '';
+
+if (is_day()) {
+    $archive_title = get_the_date('Y/n/j');
+    $archive_detail = 'Daily Archives of ' . get_the_date('Y/n/j');
+} elseif (is_month()) {
+    $archive_title = get_the_date('Y/n');
+    $archive_detail = 'Monthly Archives of ' . get_the_date('Y/n');
+} elseif (is_year()) {
+    $archive_title = get_the_date('Y');
+    $archive_detail = 'Yearly Archives of ' . get_the_date('Y');
+}
+
+get_header();
+?>
 
 <?php if (have_posts()) : ?>
-<div class="jumbotron">
+<div class="content">
   <div class="container">
-    <h1><?php
-        if (is_day()) {
-            printf( __('Daily Archives: %s', 'nodoka'), get_the_date() );
-        } elseif (is_month()) {
-            printf( __('Monthly Archives: %s', 'nodoka'), get_the_date('Y.n'));
-        } elseif (is_year()) {
-            printf( __('Yearly Archives: %s', 'nodoka'), get_the_date('Y'));
-        } else {
-            _e('Archives', 'nodoka');
-        }
-        ?></h1>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-8 col-sm-8 col-md-8 col-lg-8">
-      <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part( 'content', get_post_format() ); ?>
-      <?php endwhile; ?>
-      <?php nodoka_paging_nav(); ?>
-    </div>
-    <div class="col-4 col-sm-4 col-md-4 col-lg-4">
-      <?php get_sidebar(); ?>
+    <div class="blog">
+      <div class="row">
+        <div class="col-8 col-lg-8">
+          <h2><?php echo $archive_title; ?></h2>
+            <?php if (!empty($archive_detail)) : ?>
+              <p class="big grey"><?php echo $archive_detail; ?></p>
+            <?php endif; ?>
+          <hr>
+          <div class="posts">
+            <?php while (have_posts()) : the_post(); ?>
+              <?php get_template_part( 'content', get_post_format() ); ?>
+            <?php endwhile; ?>
+            <?php nodoka_paging_nav(); ?>
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+          <?php get_sidebar(); ?>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<?php else : ?>
-<div class="container">
-  <p><?php _e('お探しのページは見つかりませんでした。'); ?></p>
 </div>
 <?php endif; ?>
 <?php get_footer(); ?>

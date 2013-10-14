@@ -5,18 +5,15 @@
  */
  
 get_header(); ?>
-<section class="container">
-  <?php the_post(); ?>
-  <div>
-    <header>
-      <h1><?php the_title(); ?></h1>
-    </header>
-    <section>
+<div class="content">
+  <div class="container">
+    <?php the_post(); ?>
+    <h2><?php the_title(); ?></h2>
+    <hr>
+
+    <div>
       <?php the_content(); ?>
-    </section>
-    <footer>
-      <?php the_date(); ?> Updated.
-    </footer>
+    </div>
   </div>
-</section>
+</div>
 <?php get_footer(); ?>
