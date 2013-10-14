@@ -5,8 +5,6 @@
  */
 
 get_header(); ?>
-
-<?php if (have_posts()) : ?>
 <div class="content">
   <div class="container">
     <div class="blog">
@@ -15,12 +13,18 @@ get_header(); ?>
           <h2>Search Results</h2>
           <p class="big grey">for "<?php echo get_search_query(); ?>"</p>
           <hr>
-          <div class="posts">
-            <?php while (have_posts()) : the_post(); ?>
-              <?php get_template_part( 'content', get_post_format() ); ?>
-            <?php endwhile; ?>
-            <?php nodoka_paging_nav(); ?>
-          </div>
+          <?php if (have_posts()) : ?>
+            <div class="posts">
+              <?php while (have_posts()) : the_post(); ?>
+                <?php get_template_part( 'content', get_post_format() ); ?>
+              <?php endwhile; ?>
+              <?php nodoka_paging_nav(); ?>
+            </div>
+          <?php else: ?>
+            <div class="container">
+              <p>Sorry, we couldn't find any articles.</p>
+            </div>
+          <?php endif; ?>
         </div>
         <div class="col-4 col-sm-4 col-md-4 col-lg-4">
           <?php get_sidebar(); ?>
@@ -29,5 +33,5 @@ get_header(); ?>
     </div>
   </div>
 </div>
-<?php endif; ?>
+
 <?php get_footer(); ?>
