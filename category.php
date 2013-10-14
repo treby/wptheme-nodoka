@@ -1,7 +1,7 @@
 <?php 
 /**
- * archive.php / is_archive() : アーカイブページテンプレートファイル
- *                                                  2011.10.20 treby
+ * category.php : Category Archive Template
+ *                     2013.10.14 treby
  */
 
 get_header(); ?>
@@ -9,7 +9,10 @@ get_header(); ?>
 <?php if (have_posts()) : ?>
 <div class="jumbotron">
   <div class="container">
-    <h1>Archives</h1>
+    <h1><?php single_cat_title('Category: '); ?></h1>
+    <?php if (category_description() ) : ?>
+      <p><?php category_description(); ?></p>
+    <?php endif; ?>
   </div>
 </div>
 <div class="container">

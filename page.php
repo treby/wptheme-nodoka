@@ -1,13 +1,13 @@
 <?php
 /**
- * page.php / is_page() : 固定ページテンプレートファイル
- *                                    2011.10.20 treby
+ * page.php : Static page template
+ *                      2011.10.20 treby
  */
  
 get_header(); ?>
-<section id="content_only">
+<section class="container">
   <?php the_post(); ?>
-  <div id="the_content">
+  <div>
     <header>
       <h1><?php the_title(); ?></h1>
     </header>
@@ -15,9 +15,8 @@ get_header(); ?>
       <?php the_content(); ?>
     </section>
     <footer>
-      <?php the_date(); ?> 更新
+      <?php the_date(); ?> Updated.
     </footer>
   </div>
-  <div class="back_to_top"><a href="<?php bloginfo('url') ?>">HOME</a></div>
 </section>
 <?php get_footer(); ?>

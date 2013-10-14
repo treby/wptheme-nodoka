@@ -15,7 +15,8 @@ get_header(); ?>
   <div class="row">
     
     <?php if (have_posts()) : // Recently Posts  ?>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 ndk-left-side">
+      <div class="container">
       <h2>Recently Blog Update</h2>
       <p>最近のブログ更新一覧です。</p>
       <ul>
@@ -27,38 +28,15 @@ get_header(); ?>
         </li>
         <?php endwhile; ?>
       </ul>
+      </div>
     </div>
     <?php endif; ?>
- 
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
-   
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-      <h2>Dummy</h2>
-      <p>dummy dmyyy</p>
-    </div>
+
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 ndk-right-side">
+      <?php get_sidebar(); ?>
+    </div> 
   </div>
   <div class="row">
-    <div class="container">
       <?php get_footer(); ?>
-    </div>
   </div>
 </div>

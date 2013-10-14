@@ -1,7 +1,7 @@
 <?php 
 /**
- * archive.php / is_archive() : アーカイブページテンプレートファイル
- *                                                  2011.10.20 treby
+ * date.php : Date Archive Template
+ *                     2013.10.14 treby
  */
 
 get_header(); ?>
@@ -9,7 +9,17 @@ get_header(); ?>
 <?php if (have_posts()) : ?>
 <div class="jumbotron">
   <div class="container">
-    <h1>Archives</h1>
+    <h1><?php
+        if (is_day()) {
+            printf( __('Daily Archives: %s', 'nodoka'), get_the_date() );
+        } elseif (is_month()) {
+            printf( __('Monthly Archives: %s', 'nodoka'), get_the_date('Y.n'));
+        } elseif (is_year()) {
+            printf( __('Yearly Archives: %s', 'nodoka'), get_the_date('Y'));
+        } else {
+            _e('Archives', 'nodoka');
+        }
+        ?></h1>
   </div>
 </div>
 <div class="container">
