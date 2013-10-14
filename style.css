@@ -1,11 +1,12 @@
 /* 
-    Theme Name: Nodoka
+    Theme Name: nodoka
     Description: Atelier NODOKA main theme.
     Author: treby
     Author URI: http://www.atelier-nodoka.net/
-    Version: 0.9.5
+    Version: 1.0
  */
 
+@import url('css/google-code-prettify.css');
 @import url('css/bootstrap.min.css');
 @import url('css/bootstrap-theme.min.css');
 
