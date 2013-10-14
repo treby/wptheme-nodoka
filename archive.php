@@ -5,25 +5,28 @@
  */
 
 get_header(); ?>
-<div id="content">
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-    <header>
-      <h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-    </header>
-    <section>
-      <?php the_content(__('続きを読む'));?>
-    </section>
-    <footer>
-      <!-- 投稿日時、投稿者、タグ、カテゴリ -->
-      <?php the_tags('Tags: '); ?> <br>
-      <span class="date"><?php the_time('Y.m.d (D)'); ?></span> <?php the_time(); ?> | <a href="<?php bloginfo('url'); ?>/author/<?php the_author(); ?>/"><?php the_author(); ?></a> | <?php the_category(', '); ?>
-      <?php if($post->comment_count > 0) : ?> | <strong><?php comments_popup_link('', 'コメント（1）', 'コメント（%）'); ?></strong><?php endif; ?>
-    </footer>
-  </article>
-  <?php endwhile; if($_SERVER['REQUEST_URI'] == '/'): ?><div class="top-more"><a href="/page/2/">さらに前の投稿</a></div><?php else: wp_pagenavi(); endif; else: ?>
-  <p><?php _e('お探しのページは見つかりませんでした。'); ?></p>
-  <?php endif; ?>
+
+<?php if (have_posts()) : ?>
+<div class="content">
+  <div class="container">
+    <div class="blog">
+      <div class="row">
+        <div class="col-8 col-lg-8">
+          <h2>Archives</h2>
+          <hr>
+          <div class="posts">
+            <?php while (have_posts()) : the_post(); ?>
+              <?php get_template_part( 'content', get_post_format() ); ?>
+            <?php endwhile; ?>
+            <?php nodoka_paging_nav(); ?>
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+          <?php get_sidebar(); ?>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<?php get_sidebar(); ?>
+<?php endif; ?>
 <?php get_footer(); ?>
