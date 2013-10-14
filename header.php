@@ -1,7 +1,7 @@
 <?php
 /**
- * header.php / get_header() : ヘッダーモジュール
- *                                    2011.10.20 treby
+ * header.php : header module
+ *                      2011.10.20 treby
  */?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

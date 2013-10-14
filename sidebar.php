@@ -1,7 +1,7 @@
 <?php
 /**
- * sidebar.php / get_sidebar() : サイドバーモジュール
- *                                    2011.10.20 treby
+ * sidebar.php : sidebar module
+ *                         2011.10.20 treby
  */?>
 <!-- begin sidebar -->
 <?php if (is_front_page()) :?>
