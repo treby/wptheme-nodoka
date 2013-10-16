@@ -14,7 +14,13 @@ get_header(); ?>
 <div class="content">
   <div class="container" id="content">
     <div class="row">
-      <?php get_sidebar(); ?>
+      <div class="container">
+      <?php
+        if ( function_exists('dynamic_sidebar')) {
+            dynamic_sidebar('content_frontpage');
+        }
+      ?>
+      </div>
     </div>
   </div>
 </div>
