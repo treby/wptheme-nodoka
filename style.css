@@ -3,8 +3,8 @@
     Description: Atelier NODOKA main theme.
     Author: treby
     Author URI: http://www.atelier-nodoka.net/
-    Version: 1.0
- */
+    Version: 1.1
+*/
 
 @import url('css/google-code-prettify.css');
 @import url('css/bootstrap.min.css');
@@ -14,3 +14,6 @@
 @import url('css/font-awesome.css');
 @import url('css/metro.css');
 @import url('css/orange.css');
+
+/* my override */
+@import url('css/nodoka.css');

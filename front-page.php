@@ -5,16 +5,27 @@
  */
  
 get_header(); ?>
-<div class="full-slider jumbotron">
-  <div class="container">
-    <h2 style="color:white;">Happy Hacking!!</h2>
-    <p>天使のミクさんマジ天使。</p>
-  </div>
-</div>
 <div class="content">
-  <div class="container" id="content">
+  <div class="container">
     <div class="row">
-      <?php get_sidebar(); ?>
+      <div class="col-md-12">
+        <div id="da-slider" class="da-slider">
+          <div class="da-slide">
+            <div class="da-blue">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/top.jpg" style="width:100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+      <?php
+        if ( function_exists('dynamic_sidebar')) {
+            dynamic_sidebar('content_frontpage');
+        }
+      ?>
+      </div>
     </div>
   </div>
 </div>

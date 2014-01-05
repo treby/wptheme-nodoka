@@ -8,54 +8,31 @@
  * ウィジェット設定
  */
 function nodoka_widgets_init() {
-    $default_bw = '<aside id="%1$s" class="widget %2$s">';
-    $default_aw = '</aside>';
-    $default_bt = '<h4>';
-    $default_at = '</h4>';
+    $sidebar_names  = array(
+        'default',
+        'home',
+        'archive',
+        'single'
+    );
+
+    foreach ($sidebar_names as $name) {
+        register_sidebar( array(
+            'name' => __( $name, 'nodoka' ),
+            'id' => 'sidebar_' . $name,
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h4>',
+            'after_title'   => '</h4>'
+        ) );
+    }
 
     register_sidebar( array(
-        'name' => __( 'sidebar_default', 'nodoka' ),
-        'id' => 'sidebar_default',
-        'before_widget' => $default_bw,
-        'after_widget' => $default_aw,
-        'before_title' => $default_bt,
-        'after_title' => $default_at,
-    ) );
-    
-    register_sidebar( array(
-        'name' => __( 'content_frontpage', 'nodoka' ),
-        'id' => 'content_frontpage',
+        'name'          => __( 'content_frontpage', 'nodoka' ),
+        'id'            => 'content_frontpage',
         'before_widget' => '<div class="col-6 col-sm-6 col-md-6 col-lg-6">',
-        'after_widget' => "</div>",
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'sidebar_home', 'nodoka' ),
-        'id' => 'sidebar_home',
-        'before_widget' => $default_bw,
-        'after_widget' => $default_aw,
-        'before_title' => $default_bt,
-        'after_title' => $default_at,
-    ) );
-    
-    register_sidebar( array(
-        'name' => __( 'sidebar_archive', 'nodoka' ),
-        'id' => 'sidebar_archive',
-        'before_widget' => $default_bw,
-        'after_widget' => $default_aw,
-        'before_title' => $default_bt,
-        'after_title' => $default_at,
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'sidebar_single', 'nodoka' ),
-        'id' => 'sidebar_single',
-        'before_widget' => $default_bw,
-        'after_widget' => $default_aw,
-        'before_title' => $default_bt,
-        'after_title' => $default_at,
+        'after_widget'  => "</div>",
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
     ) );
 }
 add_action( 'widgets_init', 'nodoka_widgets_init' );
