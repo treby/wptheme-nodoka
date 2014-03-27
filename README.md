@@ -1,7 +1,7 @@
 wptheme-nodoka
 ======
 
-For [Atelier NODOKA](http://www.atelier-nodoka.net/)
+WordPress theme for [Atelier NODOKA](http://www.atelier-nodoka.net/)
 
 ## Todo
 - Static page CSS.
