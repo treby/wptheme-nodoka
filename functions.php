@@ -25,15 +25,6 @@ function nodoka_widgets_init() {
             'after_title'   => '</h4>'
         ) );
     }
-
-    register_sidebar( array(
-        'name'          => __( 'content_frontpage', 'nodoka' ),
-        'id'            => 'content_frontpage',
-        'before_widget' => '<div class="col-6 col-sm-6 col-md-6 col-lg-6">',
-        'after_widget'  => "</div>",
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>',
-    ) );
 }
 add_action( 'widgets_init', 'nodoka_widgets_init' );
 
