@@ -26,14 +26,18 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="logo col-sm-4 col-md-4">
-        <h1>
-          <a href="<?php bloginfo('url') ?>">Atelier <span class="color">NODOKA</span></a>
-        </h1>
-        <div class="hmeta">Your future hasn't been written yet.</div>
+      <div class="col-sm-5 col-md-5">
+        <div class="logo">
+          <h1>
+            <a href="<?php bloginfo('url') ?>">
+              Atelier <span class="color">NODOKA</span>
+            </a>
+          </h1>
+          <div class="hmeta">Your future hasn't been written yet.</div>
+        </div>
       </div>
 
-      <div class="col-sm-offset-2 col-sm-6 col-md-offset-3 col-md-5">
+      <div class="col-sm-offset-1 col-sm-6 col-md-offset-2 col-md-5">
         <div class="form text-right">
           <?php get_search_form(); ?>
         </div>
