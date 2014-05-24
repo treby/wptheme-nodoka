@@ -11,9 +11,8 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
 
 <!--  <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+  <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600">
+  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
 
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>">
@@ -26,14 +25,18 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="logo col-sm-4 col-md-4">
-        <h1>
-          <a href="<?php bloginfo('url') ?>">Atelier <span class="color">NODOKA</span></a>
-        </h1>
-        <div class="hmeta">Your future hasn't been written yet.</div>
+      <div class="col-sm-5 col-md-5">
+        <div class="logo">
+          <h1>
+            <a href="<?php bloginfo('url') ?>">
+              Atelier <span class="color">NODOKA</span>
+            </a>
+          </h1>
+          <div class="hmeta">Your future hasn't been written yet.</div>
+        </div>
       </div>
 
-      <div class="col-sm-offset-2 col-sm-6 col-md-offset-3 col-md-5">
+      <div class="col-sm-offset-1 col-sm-6 col-md-offset-2 col-md-5">
         <div class="form text-right">
           <?php get_search_form(); ?>
         </div>
@@ -53,7 +56,20 @@
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <?php wp_list_pages('title_li=&deqpth=1&exclude=487,2281'); ?>
+        <li><a href="<?php bloginfo('url') ?>">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/works">Works</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Other
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/history">History</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>

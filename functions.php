@@ -4,6 +4,7 @@
  *                     2011.10.20 treby
  */
 
+// {{{ nodoka_widgets_init
 /**
  * ウィジェット設定
  */
@@ -27,7 +28,9 @@ function nodoka_widgets_init() {
     }
 }
 add_action( 'widgets_init', 'nodoka_widgets_init' );
+// }}}
 
+// {{{ nodoka_paging_nav
 if ( ! function_exists( 'nodoka_paging_nav' ) ) :
 /**
  * Displays navigation to next/previous set of posts when applicable.
@@ -38,22 +41,21 @@ function nodoka_paging_nav() {
     global $wp_query;
 
     // Don't print empty markup if there's only one page.
-    if ( $wp_query->max_num_pages < 2 )
+    if ( $wp_query->max_num_pages < 2 ) {
         return;
-?>
-    <nav class="paging" role="navigation">
-      <?php if ( get_next_posts_link() ) : ?>
-        <?php next_posts_link(__('Older', 'nodoka')); ?>
-      <?php endif; ?>
-      <?php if ( get_previous_posts_link() ) : ?>
-        <?php previous_posts_link(__('Newer', 'nodoka')); ?>
-      <?php endif; ?>
-    </nav>
-    <div class="clearfix"></div>
-<?php
+    }
+
+    $next_posts_link = get_next_posts_link();
+    $previous_posts_link = get_previous_posts_link();
+
+    echo '<nav class="paging" role="navigation">';
+    echo "{$previous_posts_link}{$next_posts_link}";
+    echo '</nav><div class="clearfix"></div>';
 }
 endif;
+// }}}
 
+// {{{ counterize_getuniquehitstheday
 if ( ! function_exists( 'counterize_getuniquehitstheday' )) :
 /**
  * Get unique hits the day (for Counterize II)
@@ -69,4 +71,6 @@ function counterize_getuniquehitstheday($daysago) {
     return $wpdb->get_var($sql);
 }
 endif;
+// }}}
+
 ?>
