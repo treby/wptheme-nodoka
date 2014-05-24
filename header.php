@@ -12,7 +12,6 @@
 
 <!--  <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">-->
   <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600">
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
 
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
@@ -59,6 +58,7 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php bloginfo('url') ?>">Home</a></li>
         <li><a href="/about">About</a></li>
+        <li><a href="/works">Works</a></li>
         <li><a href="/blog">Blog</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">

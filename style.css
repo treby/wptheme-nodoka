@@ -11,7 +11,7 @@
 @import url('css/bootstrap-theme.min.css');
 
 /* for Metro theme */
-@import url('css/font-awesome.css');
+@import url('css/font-awesome.min.css');
 @import url('css/metro.css');
 @import url('css/orange.css');
 

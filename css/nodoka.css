@@ -1,19 +1,7 @@
 /* static page */
-.page .entry section h1 {
-    margin-top: 1.5em;
-    font-size: 26px;
-}
-.page .entry section h2 {
-    margin-top: 1em;
-    font-size: 24px;
-}
-.page .entry section h3 {
-    margin-top: 1em;
-    font-size: 18px;
-}
-.page .entry section ul {
-    margin-left: 2em;
-    list-style-type: disc;
+/* works */
+body.modal-open {
+    margin-right: 0;
 }
 
 /* blog entry */

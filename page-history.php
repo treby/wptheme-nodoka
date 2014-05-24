@@ -130,6 +130,7 @@ get_header();
         </div>
       </div>
     </div>
+    <div class="border"></div>
   </div>
 </div>
 
