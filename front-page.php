@@ -9,7 +9,7 @@ get_header(); ?>
     <div id="da-slider" class="da-slider" style="margin-bottom: 1em;">
       <div class="da-slide">
         <div class="da-blue">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/top.jpg" style="width:100%;">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/top.jpg" class="img-responsive">
         </div>
       </div>
     </div>
