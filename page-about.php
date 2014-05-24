@@ -14,9 +14,7 @@ get_header();
           <h2>Happy Hacking!!</h2>
           <p class="big grey">Just for Fun.</p>
           <div class="lp-image" style="box-shadow: none;">
-            <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" class="img-responsive">
-            </a>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" class="img-responsive">
           </div>
           <div class="button">
             <a href="/history"><i class="fa fa-book"></i> History</a>
@@ -51,7 +49,7 @@ get_header();
         <h4>Objective</h4>
         <p>サークルを立ち上げた動機として、いつか「少し遅く目覚めたよく晴れた朝に、まだゆっくりしていられるような余裕を含んだ笑顔を見たときの気持ち」になれる作品を創出したいというものがあります。</p>
         <p>また、行動の原動力が「楽しさ」にあると思っていて何よりも楽しむことを大切にしていきたいと考えています。現実にどのくらい実践できているのかという話はあったりするのですが、基本を忘れずにやっていければと思います。忙しさを理由に笑顔を忘れていないか今一度自分自身を振り返ってみたいものです。</p>
-        <p>そんな温度館ですが、よろしければお付き合いくださいませ。</p>
+        <p>そんな温度感ですが、よろしければお付き合いくださいませ。</p>
         <hr>
       </div>
     </div>
