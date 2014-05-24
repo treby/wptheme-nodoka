@@ -18,6 +18,9 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" class="img-responsive">
             </a>
           </div>
+          <div class="button">
+            <a href="/history">History</a>
+          </div>
           <div class="border"></div>
         </div>
       </div>
