@@ -19,7 +19,8 @@ get_header();
             </a>
           </div>
           <div class="button">
-            <a href="/history">History</a>
+            <a href="/history"><i class="fa fa-book"></i> History</a>
+            <a href="/profile"><i class="fa fa-github-alt"></i> Profile</a>
           </div>
           <div class="border"></div>
         </div>
@@ -54,6 +55,7 @@ get_header();
         <hr>
       </div>
     </div>
+    <div class="border"></div>
   </div>
 </div>
 <?php
