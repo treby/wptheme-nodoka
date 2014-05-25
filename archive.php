@@ -11,7 +11,7 @@ get_header(); ?>
   <div class="container">
     <div class="blog">
       <div class="row">
-        <div class="col-8 col-lg-8">
+        <div class="col-md-8 col-sm-8">
           <h2>Archives</h2>
           <hr>
           <div class="posts">
@@ -21,7 +21,7 @@ get_header(); ?>
             <?php nodoka_paging_nav(); ?>
           </div>
         </div>
-        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-md-4 col-sm-4">
           <?php get_sidebar(); ?>
         </div>
       </div>

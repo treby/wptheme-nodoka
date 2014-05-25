@@ -48,9 +48,9 @@ function nodoka_paging_nav() {
     $next_posts_link = get_next_posts_link();
     $previous_posts_link = get_previous_posts_link();
 
-    echo '<nav class="paging" role="navigation">';
+    echo '<div class="paging">';
     echo "{$previous_posts_link}{$next_posts_link}";
-    echo '</nav><div class="clearfix"></div>';
+    echo '</div><div class="clearfix"></div>';
 }
 endif;
 // }}}

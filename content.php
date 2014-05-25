@@ -21,11 +21,13 @@
       $the_tags = get_the_tags();
       $font_awesome_class = count($the_tags) > 1 ? 'fa-tags' : 'fa-tag';
 
-      if (isset($the_tags)) {
+      if ($the_tags) {
         echo sprintf('&nbsp;<span class="fa %s"></span>', $font_awesome_class);
         the_tags('', ', ', '');
       }
     ?>
   </div>
-  <?php the_content(__('続きを読む'));?>
+  <div class="entry-main">
+    <?php the_content(__('続きを読む'));?>
+  </div>
 </div>
