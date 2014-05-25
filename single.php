@@ -9,17 +9,23 @@ get_header(); ?>
   <div class="container">
     <div class="blog">
       <div class="row">
-        <div class="col-8 col-lg-8">
+        <div class="col-md-8 col-sm-8">
           <div class="posts">
             <?php while(have_posts()) : the_post(); ?>
               <?php get_template_part( 'content', get_post_format() ); ?>
             <?php endwhile; ?>
-            <div class="container">
-              <?php next_post_link('＜ %link'); ?> | <a href="<?php bloginfo('url'); ?>">HOME</a> | <?php previous_post_link('%link ＞'); ?>
+            <div class="navigation button">
+              <div class="pull-left">
+                <?php next_post_link('%link'); ?>
+              </div>
+              <div class="pull-right">
+                <?php previous_post_link('%link'); ?>
+              </div>
             </div>
           </div>
+          <div class="clearfix"></div>
         </div>
-        <div class="col-4 col-lg-4">
+        <div class="col-md-4 col-sm-4">
           <?php get_sidebar(); ?>
         </div>
       </div>

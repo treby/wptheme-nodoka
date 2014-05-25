@@ -11,7 +11,7 @@ get_header(); ?>
   <div class="container">
     <div class="blog">
       <div class="row">
-        <div class="col-8 col-lg-8">
+        <div class="col-md-8 col-sm-8">
           <h2><?php single_cat_title('Category: '); ?></h2>
             <?php if (category_description() ) : ?>
               <p class="big grey"><?php category_description(); ?></p>
@@ -24,7 +24,7 @@ get_header(); ?>
             <?php nodoka_paging_nav(); ?>
           </div>
         </div>
-        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-md-4 col-sm-4">
           <?php get_sidebar(); ?>
         </div>
       </div>

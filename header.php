@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="col-sm-offset-1 col-sm-6 col-md-offset-2 col-md-5">
+      <div class="col-sm-offset-2 col-sm-5 col-md-offset-3 col-md-4">
         <div class="form text-right">
           <?php get_search_form(); ?>
         </div>
