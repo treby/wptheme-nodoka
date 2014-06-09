@@ -2,7 +2,9 @@
 /**
  * header.php : header module
  *                      2011.10.20 treby
- */?><!DOCTYPE html>
+ */
+echo '<!DOCTYPE html>';
+?>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
@@ -11,14 +13,11 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
 
 <!--  <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">-->
-  <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600">
-  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
 
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>">
   <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>">
 
-  <?php //wp_get_archives('type=monthly&format=link'); ?>
   <?php wp_head(); ?>
 </head>
 <body>
