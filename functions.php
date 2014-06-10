@@ -4,11 +4,64 @@
  *                     2011.10.20 treby
  */
 
+// {{{ nodoka_scripts_init
+/**
+ * 読み込むリソースの設定
+ */
+function nodoka_scripts_init()
+{
+    // {{{ Styles
+    wp_enqueue_style(
+        'font-opensans',
+        $src = 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600'
+    );
+    wp_enqueue_style(
+        'nodoka',
+        $src = get_stylesheet_uri()
+    );
+    // }}}
+
+    // {{{ Scripts
+    wp_deregister_script('jquery');
+    wp_enqueue_script(
+        'jquery',
+        $src = get_template_directory_uri() . '/js/jquery.js',
+        $deps = [],
+        $ver = false,
+        $in_footer = true
+    );
+    wp_enqueue_script(
+        'code-prettify',
+        $src = get_template_directory_uri() . '/js/google-code-prettify/prettify.js',
+        $deps = [],
+        $ver = false,
+        $in_footer = true
+    );
+    wp_enqueue_script(
+        'tw-bootstrap',
+        $src = get_template_directory_uri() . '/js/bootstrap.min.js',
+        $deps = ['jquery'],
+        $ver = false,
+        $in_footer = true
+    );
+    wp_enqueue_script(
+        'nodoka',
+        $src = get_template_directory_uri() . '/js/nodoka.js',
+        $deps = ['code-prettify'],
+        $ver = false,
+        $in_footer = true
+    );
+    // }}}
+}
+add_action('wp_enqueue_scripts', 'nodoka_scripts_init');
+// }}}
+
 // {{{ nodoka_widgets_init
 /**
  * ウィジェット設定
  */
-function nodoka_widgets_init() {
+function nodoka_widgets_init()
+{
     $sidebar_names  = array(
         'default',
         'home',
@@ -27,17 +80,17 @@ function nodoka_widgets_init() {
         ) );
     }
 }
-add_action( 'widgets_init', 'nodoka_widgets_init' );
+add_action('widgets_init', 'nodoka_widgets_init');
 // }}}
 
 // {{{ nodoka_paging_nav
-if ( ! function_exists( 'nodoka_paging_nav' ) ) :
 /**
  * Displays navigation to next/previous set of posts when applicable.
  *
  * @return void
  */
-function nodoka_paging_nav() {
+function nodoka_paging_nav()
+{
     global $wp_query;
 
     // Don't print empty markup if there's only one page.
@@ -52,17 +105,16 @@ function nodoka_paging_nav() {
     echo "{$previous_posts_link}{$next_posts_link}";
     echo '</div><div class="clearfix"></div>';
 }
-endif;
 // }}}
 
 // {{{ counterize_getuniquehitstheday
-if ( ! function_exists( 'counterize_getuniquehitstheday' )) :
 /**
  * Get unique hits the day (for Counterize II)
  *
  * @returns int - 1 day unique user count.
  */
-function counterize_getuniquehitstheday($daysago) {
+function counterize_getuniquehitstheday($daysago)
+{
     global $wpdb;
 
     $aftertheday =  date("Y-m-d",strtotime("-".($daysago - 1)." day"));
@@ -70,7 +122,6 @@ function counterize_getuniquehitstheday($daysago) {
     $sql = "SELECT COUNT(DISTINCT ip) FROM ".counterize_logTable()." WHERE timestamp >= '$theday' AND timestamp < '$aftertheday' ";
     return $wpdb->get_var($sql);
 }
-endif;
 // }}}
 
 ?>
