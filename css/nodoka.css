@@ -2,10 +2,6 @@ body.modal-open {
     margin-right: 0;
 }
 
-button.navbar-toggle {
-    display: block !important;
-}
-
 /* {{{ blog entry */
 .blog .entry {
 }

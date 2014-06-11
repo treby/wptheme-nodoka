@@ -11,6 +11,7 @@
 function nodoka_scripts_init()
 {
     // {{{ Styles
+    wp_deregister_style('counterize_stylesheet');
     wp_enqueue_style(
         'font-opensans',
         $src = 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600'
