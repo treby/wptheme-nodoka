@@ -26,7 +26,7 @@ function nodoka_scripts_init()
     wp_deregister_script('jquery');
     wp_enqueue_script(
         'jquery',
-        $src = get_template_directory_uri() . '/js/jquery.js',
+        $src = '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
         $deps = [],
         $ver = false,
         $in_footer = true
