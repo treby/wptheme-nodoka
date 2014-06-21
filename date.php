@@ -8,14 +8,11 @@ $archive_title = 'Archives';
 $archive_detail = '';
 
 if (is_day()) {
-    $archive_title = get_the_date('Y/n/j');
-    $archive_detail = 'Daily Archives of ' . get_the_date('Y/n/j');
+    $archive_detail = sprintf('Daily Archives (%s)', get_the_date('Y/n/j'));
 } elseif (is_month()) {
-    $archive_title = get_the_date('Y/n');
-    $archive_detail = 'Monthly Archives of ' . get_the_date('Y/n');
+    $archive_detail = sprintf('Monthly Archives (%s)', get_the_date('Y/n'));
 } elseif (is_year()) {
-    $archive_title = get_the_date('Y');
-    $archive_detail = 'Yearly Archives of ' . get_the_date('Y');
+    $archive_detail = sprintf('Yearly Archives (%s)', get_the_date('Y'));
 }
 
 get_header();
