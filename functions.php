@@ -108,6 +108,47 @@ function nodoka_paging_nav()
 }
 // }}}
 
+// {{{ get_nodoka_content
+/**
+ * Get common content.
+ *
+ * @return void
+ */
+function get_nodoka_content($title = null, $description = null, $post_slug = null)
+{
+    $title_element = '';
+    if (isset($title)) {
+        $title_element = sprintf('<h2>%s</h2>', $title);
+        if (isset($description)) {
+            $title_element .= sprintf('<p class="big grey">%s</p>', $description);
+        }
+        $title_element .= '<hr />';
+    }
+
+    echo '<div class="content">';
+    echo '  <div class="container">';
+    echo '    <div class="blog">';
+    echo '      <div class="row">';
+    echo '        <div class="col-md-8 col-sm-8">';
+    echo $title_element;
+    echo '          <div class="posts">';
+    while (have_posts()) {
+        the_post();
+        get_template_part('post', get_post_format());
+    }
+    nodoka_paging_nav();
+    echo '          </div>';
+    echo '        </div>';
+    echo '        <div class="col-md-4 col-sm-4">';
+    get_sidebar();
+    echo '        </div>';
+    echo '      </div>';
+    echo '    </div>';
+    echo '  </div>';
+    echo '</div>';
+}
+// }}}
+
 // {{{ counterize_getuniquehitstheday
 /**
  * Get unique hits the day (for Counterize II)
