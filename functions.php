@@ -4,7 +4,7 @@
  *                     2011.10.20 treby
  */
 
-// {{{ nodoka_scripts_init
+// {{{ nodoka_scripts_init 
 /**
  * 読み込むリソースの設定
  */
@@ -166,4 +166,5 @@ function counterize_getuniquehitstheday($daysago)
 }
 // }}}
 
+remove_filter('the_content', 'wpautop');
 ?>
