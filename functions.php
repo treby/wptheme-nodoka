@@ -149,6 +149,29 @@ function get_nodoka_content($title = null, $description = null, $post_slug = nul
 }
 // }}}
 
+// {{{ get_nodoka_counter
+/**
+ * Get counter.
+ *
+ * @return void
+ */
+function get_nodoka_counter()
+{
+    $count_all = counterize_getuniqueamount();
+    $count_today = counterize_getuniquehitstoday();
+    $count_yesterday = counterize_getuniquehitstheday(1);
+    $count_7days = counterize_getuniquelatest7days();
+
+    printf(
+        'Access: %s (T: %s, Y: %s, 7days: %s)',
+        $count_all,
+        $count_today,
+        $count_yesterday,
+        $count_7days
+    );
+}
+// }}}
+
 // {{{ counterize_getuniquehitstheday
 /**
  * Get unique hits the day (for Counterize II)
