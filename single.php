@@ -1,9 +1,9 @@
-<?php 
+<?php
 /**
  * single.php : single page template
  *                             2011.10.20 treby
  */
- 
+
 get_header(); ?>
 <div class="content">
   <div class="container">
@@ -12,7 +12,7 @@ get_header(); ?>
         <div class="col-md-8 col-sm-8">
           <div class="posts">
             <?php while(have_posts()) : the_post(); ?>
-              <?php get_template_part( 'content', get_post_format() ); ?>
+              <?php get_template_part('post', get_post_format()); ?>
             <?php endwhile; ?>
             <div class="navigation button">
               <div class="pull-left">

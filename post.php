@@ -1,6 +1,6 @@
 <?php
 /**
- * content.php : the content template
+ * post.php : the post template
  *                                2013.10.14 treby
  */
 ?>
