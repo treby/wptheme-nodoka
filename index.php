@@ -38,10 +38,7 @@ get_header();
 
 if (have_posts()) {
     get_nodoka_content('Index');
-} else {
-    echo '<div class="container">';
-    echo '<p>お探しのページは見つかりませんでした。</p>';
-    echo '</div>';
 }
+
 get_footer();
 ?>
