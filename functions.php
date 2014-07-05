@@ -63,22 +63,22 @@ add_action('wp_enqueue_scripts', 'nodoka_scripts_init');
  */
 function nodoka_widgets_init()
 {
-    $sidebar_names  = array(
+    $sidebar_names  = [
         'default',
         'home',
         'archive',
         'single'
-    );
+    ];
 
     foreach ($sidebar_names as $name) {
-        register_sidebar( array(
+        register_sidebar( [
             'name' => __( $name, 'nodoka' ),
             'id' => 'sidebar_' . $name,
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h4>',
             'after_title'   => '</h4>'
-        ) );
+        ] );
     }
 }
 add_action('widgets_init', 'nodoka_widgets_init');
