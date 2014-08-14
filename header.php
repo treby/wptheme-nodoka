@@ -5,8 +5,11 @@
  */
 
 $page_title = wp_title('', false);
-$blog_name = get_bloginfo('name', 'Display');
+$blog_name = get_bloginfo('name');
 $title = empty($page_title) ? $blog_name : "$page_title | $blog_name";
+
+$excerpt = get_the_excerpt();
+$description = empty($excerpt) ? get_bloginfo('description') : $excerpt;
 
 echo '<!DOCTYPE html>';
 ?>
@@ -22,7 +25,7 @@ echo '<!DOCTYPE html>';
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:site" content="@treby006" />
   <meta property="twitter:title" content="<?php echo htmlspecialchars($title); ?>" />
-  <meta property="twitter:description" content="<?php echo htmlspecialchars($page_title); ?>" />
+  <meta property="twitter:description" content="<?php echo htmlspecialchars($description); ?>" />
   <meta property="twitter:url" content="<?php the_permalink(); ?>" />
 
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
