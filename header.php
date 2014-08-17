@@ -20,8 +20,6 @@ echo '<!DOCTYPE html>';
   <meta name="robots" content="follow, all">
   <title><?php echo htmlspecialchars($title); ?></title>
 
-<!--  <link rel="Shortcut Icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">-->
-
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:site" content="@treby006" />
   <meta property="twitter:title" content="<?php echo htmlspecialchars($title); ?>" />
