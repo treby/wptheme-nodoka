@@ -10,9 +10,8 @@ $title = empty($page_title) ? $blog_name : "$page_title | $blog_name";
 
 $excerpt = get_the_excerpt();
 $description = empty($excerpt) ? get_bloginfo('description') : $excerpt;
-
-echo '<!DOCTYPE html>';
 ?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
