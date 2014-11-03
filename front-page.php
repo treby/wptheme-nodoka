@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * front-page.php : front page
  *                         2013.10.14 treby
@@ -18,7 +18,7 @@ get_header(); ?>
         <h2>Recently Updated</h2>
         <ul>
         <?php
-          $recent_posts = wp_get_recent_posts();
+          $recent_posts = wp_get_recent_posts(['post_status' => 'publish']);
           $recent_post_month = null;
 
           foreach($recent_posts as $post) {
