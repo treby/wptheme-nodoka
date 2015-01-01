@@ -4,7 +4,7 @@
  *                      2011.10.20 treby
  */
 
-$page_title = wp_title('', false);
+$page_title = trim(wp_title('', false));
 $blog_name = get_bloginfo('name');
 $title = empty($page_title) ? $blog_name : "$page_title | $blog_name";
 
