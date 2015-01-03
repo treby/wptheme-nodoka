@@ -2,6 +2,10 @@ body.modal-open {
     margin-right: 0;
 }
 
+iframe.twitter-share-button {
+    width: 100px!important;
+}
+
 /* {{{ blog entry */
 .blog .entry {
 }
