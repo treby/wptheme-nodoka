@@ -33,7 +33,12 @@ get_header(); ?>
               $recent_post_month = $posted_month;
             }
 
-            echo "<li>&nbsp;<a href=\"{$permalink}\">{$post['post_title']}</a></li>";
+            echo "<li>";
+            echo "&nbsp;<a href=\"{$permalink}\">{$post['post_title']}</a>";
+            echo "<a href=\"http://b.hatena.ne.jp/entry/{$permalink}\">";
+            echo "<img src=\"http://b.hatena.ne.jp/entry/image/{$permalink}\" alt=\"はてなブックマーク - {$post['post_title']}\" title=\"はてなブックマーク - {$post['post_title']}\">";
+            echo "</a>";
+            echo "</li>";
           }
 
           echo '<li style="text-align: right;"><a href="blog">More...</a>';
