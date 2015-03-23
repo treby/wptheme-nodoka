@@ -117,7 +117,7 @@ $works_book_list = array_reverse($works_book_list, $preserve_keys = true);
     <div class="row">
 
       <?php foreach($works_book_list as $number => $book) : ?>
-      <div class="col-md-3 col-sm-3" style="margin-bottom: 1em;">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" style="margin-bottom: 1em;">
         <div style="box-shadow: 0 4px 6px rgba(0,0,0,0.5);">
           <a data-toggle="modal" data-target="#nodoka-<?php echo $number; ?>">
             <img src="<?php echo $works_img_base . $number; ?>.jpg" style="width: 100%;">
