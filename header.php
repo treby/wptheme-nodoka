@@ -19,6 +19,7 @@ $description = empty($excerpt) ? get_bloginfo('description') : $excerpt;
   <meta name="robots" content="follow, all">
   <title><?php echo htmlspecialchars($title); ?></title>
 
+  <meta name="twitter:widgets:csp" content="on">
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:site" content="@treby006" />
   <meta property="twitter:title" content="<?php echo htmlspecialchars($title); ?>" />
