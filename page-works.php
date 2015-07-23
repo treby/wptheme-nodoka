@@ -103,6 +103,22 @@ $works_book_list = [
         'post' => ['url' => '/2013/12/c85-information/', 'title' => 'C85 委託情報'],
         'description' => '就職後一年で大分使い方を覚えたGitについての本。',
     ],
+        '12' => [
+        'title' => 'アトリエのどか式Git入門 改訂版',
+        'specific' => 'A5 / 44P / オフセット',
+        'published_at' => '2014年8月17日',
+        'event' => 'コミックマーケット86',
+        'post' => ['url' => '/2014/08/c86-information/', 'title' => 'C86 出展情報'],
+        'description' => 'C85の本をさらに拡充させた一冊。',
+    ],
+        '13' => [
+        'title' => 'Border botを支える技術',
+        'specific' => 'A5 / 28P / オフセット',
+        'published_at' => '2014年12月30日',
+        'event' => 'コミックマーケット87',
+        'post' => ['url' => '/2014/12/c87-information/', 'title' => '『Border botを支える技術』という本を出します（C87 出展情報）'],
+        'description' => '趣味で作ったTwitter botの設計や実装について書いた本。',
+    ],
 ];
 
 $works_book_list = array_reverse($works_book_list, $preserve_keys = true);
